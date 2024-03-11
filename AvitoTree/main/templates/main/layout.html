@@ -14,13 +14,19 @@
 <body>
     <aside>
         <img src="{% static 'main/img/avito-seeklogo.svg' %}">
-        <span class="logo"></span>
     </aside>
     <main>
-        <div class="search">
-            <img src="{% static 'main/img/magnifying-glass-solid.svg' %}" alt="Лупа">
-            <span class="lupa">Поиск</span>
+        <img src="{% static 'main/img/magnifying-glass-solid.svg' %}" alt="Лупа">
+        <div class="location">
+            <label class="laba">Выберите локацию:</label>
+            <select class="local" id="local" name="local">
+                {% for local in local_names %}
+                    <option value="{{ local }}">{{ local }}</option>
+                {% endfor %}
+            </select>
 
+            <br>
+        <!-- Add other form elements and submit button as needed -->
         </div>
     </main>
 </body>

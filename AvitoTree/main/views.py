@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
+
 def index(request):
-    return render(request, 'main/layout.html')
+    local_names = ["Россия", "Турция",
+                    "Индия", "Америка"]
+    return render(request, 'main/layout.html', {'local_names': local_names})
 
